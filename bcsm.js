@@ -2,19 +2,14 @@ var coordX = 53.342264,
 	coordY = -6.353818;
 	
 var topRight = L.latLng(53.356296, -6.384144),
-	bottomLeft = L.latLng(53.325211, -6.317319);
+	bottomLeft = L.latLng(53.325211, -6.317319),
+	bounds = L.latLngBounds(topRight, bottomLeft);
 	
 var map = L.map('map', {
+	maxBounds: bounds,
 	maxZoom: 18,
 	minZoom: 12
-}).setView([coordX, coordY], 15);
-
-// map.setMaxBounds(map.getBounds());
-// map.fitBounds([
-	// [53.356296, -6.384144],
-	// [53.325211, -6.317319]
-// ]);
-// var bounds = L.latLngBounds(topRight, bottomLeft);
+}).setView([coordX, coordY], 14);
 
 L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png', {
 	attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
