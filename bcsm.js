@@ -1,9 +1,9 @@
 var coordX = 53.342264,
 	coordY = -6.353818;
 	
-var topRight = L.latLng(53.356296, -6.384144),
-	bottomLeft = L.latLng(53.325211, -6.317319),
-	bounds = L.latLngBounds(topRight, bottomLeft);
+var topLeft = L.latLng(53.401754, -6.488649),
+	bottomRight = L.latLng(53.274380, -6.193634),
+	bounds = L.latLngBounds(topLeft, bottomRight);
 	
 var map = L.map('map', {
 	maxBounds: bounds,
